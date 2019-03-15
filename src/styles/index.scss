@@ -1,0 +1,29 @@
+@import 'defaults';
+
+@import 'variables';
+
+@import 'form';
+
+body {
+  font-family: $family;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url($back_image);
+  background-size: cover;
+}
+
+.stackView {
+  width: $stack_view_width;
+  height: $stack_view_height;
+  position: relative;
+}
+
+.hidden { // for hidding a form's error message
+  display: none;
+}

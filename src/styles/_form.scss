@@ -1,0 +1,120 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  height: 90%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 40px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-property: width, top;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  .form-title {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 60px;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    label {
+      display: flex;
+      margin: 0 0 3px 5px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      opacity: 0.6;
+    }
+
+    input[type='text'], 
+    input[type='password'] {
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: 1px solid rgb(204, 202, 202);
+
+      &:focus {
+        border-width: 2px;
+        border-color: lightblue;
+      }
+    }
+  }
+
+  .visibility-toggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .toggle-btn {
+      font-size: 24px;
+      opacity: 0.6;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+
+  .error-msg {
+    font-size: 0.9rem;
+    padding: 9px;
+    border-left: 3px solid red;
+    background-color: rgb(244, 244, 244);
+  }
+
+  button {
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient( 45deg, rgb(254, 52, 143), rgb(82, 203, 236) );
+    align-self: center;
+    margin-bottom: 30px;
+    transition: transform 0.2s;
+
+    &:hover {
+      border: 1px solid lightblue;
+    }
+
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+}
+
+// The class selectors 'on-front' and 'on-back' are used to place forms in the stackView
+.on-front {
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 20px black;
+  z-index: 100;
+}
+
+.on-back {
+  width: 80%;
+  top: 4rem;
+  z-index: 90;
+
+  .form-title {
+    align-self: center;
+    order: 100;
+    opacity: 0.4;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .group-container {
+    opacity: 0;
+  }
+}
