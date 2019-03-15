@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/index.css';
 
-import {Form, FormType} from './Form';
+import LoginForm    from './LoginForm';
+import RegisterForm from './RegisterForm';
 
 export default class StackView extends Component {
   constructor(props) {
@@ -35,13 +36,11 @@ export default class StackView extends Component {
   render() {
     return (
       <div className='stackView'>
-        <Form 
-          type={FormType.LOGIN}
+        <LoginForm 
           onClick={this.handleLoginFormClick} 
           onFront={this.state.loginFormInFront}
         />
-        <Form
-          type={FormType.REGISTER} 
+        <RegisterForm
           onClick={this.handleRegisterFormClick} 
           onFront={this.state.registerFormInFront}
         />
