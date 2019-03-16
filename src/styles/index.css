@@ -15,7 +15,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   height: 90%;
   background-color: white;
   border-radius: 10px;
@@ -24,7 +24,7 @@ form {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  transition-property: width, top;
+  transition-property: transform;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -97,15 +97,13 @@ form button:active {
 }
 
 .on-front {
-  width: 100%;
   top: 0;
   box-shadow: 0 5px 20px black;
   z-index: 100;
 }
 
 .on-back {
-  width: 80%;
-  top: 4rem;
+  transform: translate(-50%, 60px) scaleX(0.8);
   z-index: 90;
 }
 .on-back .form-title {
