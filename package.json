@@ -1,6 +1,6 @@
 {
-  "name": "login_and_register_stack_view",
-  "homepage": "https://chrkirk.github.io/login_and_register_stack_view",
+  "name": "fancy_login",
+  "homepage": "https://chrkirk.github.io/fancy_login/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
