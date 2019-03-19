@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/login_and_register_stack_view/precache-manifest.32f8d1ab3f51f57c69fa303ee7221314.js"
+  "/fancy_login/precache-manifest.a72ecb038ad03ca36be49f462f3460ce.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/login_and_register_stack_view/index.html", {
+workbox.routing.registerNavigationRoute("/fancy_login/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
